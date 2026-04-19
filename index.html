@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climb Gallery</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <div>
+        <h1>Climb Gallery</h1>
+        <p>Hi, I'm Vanness. Started climbing as of August 2025. Here is a database of my favorite climbs thus far.</p>
+      </div>
+    </header>
+
+    <section class="filters" aria-label="Filter climbs">
+      <div class="filter-group">
+        <label for="gradeFilter">Grade</label>
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="gymFilter">Gym</label>
+        <select id="gymFilter">
+          <option value="all">All gyms</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="climbGrid" class="climb-grid" aria-label="Climb cards">
+      <p class="loading">Loading climbs...</p>
+    </section>
+  </main>
+
+  <div
+    id="modal"
+    class="modal hidden"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+
+    <div class="modal-content">
+      <button id="closeModal" class="close-button"
+        aria-label="Close modal">
+        &times;
+      </button>
+
+      <div class="modal-layout">
+        <div class="modal-video">
+          <div class="video-frame-wrapper portrait">
+            <iframe
+              id="modalIframe"
+              src=""
+              title="Climb video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <aside class="modal-meta">
+          <h2 id="modalTitle">Climb Details</h2>
+
+          <div class="meta-group">
+            <span class="meta-label">Grade</span>
+            <p id="modalGrade" class="meta-value"></p>
+          </div>
+
+          <div class="meta-group">
+            <span class="meta-label">Date Climbed</span>
+            <p id="modalDate" class="meta-value"></p>
+          </div>
+
+          <div class="meta-group">
+            <span class="meta-label">Gym</span>
+            <p id="modalGym" class="meta-value"></p>
+          </div>
+
+          <div class="meta-group">
+            <span class="meta-label">Address</span>
+            <p id="modalAddress" class="meta-value"></p>
+          </div>
+
+          <div class="meta-group">
+            <span class="meta-label">Notes</span>
+            <p id="modalNotes" class="meta-value"></p>
+          </div>
+
+          <div class="meta-group">
+            <span class="meta-label">Video ID</span>
+            <p id="modalVideoId" class="meta-value"></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
