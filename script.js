@@ -114,7 +114,7 @@ function renderClimbs(climbList) {
           <span class="grade-pill">${escapeHtml(grade)}</span>
           <span class="card-date">${escapeHtml(climbedDate)}</span>
         </div>
-        <h3 class="card-gym">${escapeHtml(gymName)}</h3>
+        <h2 class="card-gym">${escapeHtml(gymName)}</h2>
       </div>
     `;
 
@@ -150,7 +150,7 @@ function openModal(climb) {
 function closeModal() {
   modal.classList.add("hidden");
   modal.setAttribute("aria-hidden", "true");
-  modalIframe.src = "";
+  modalIframe.src = "about:blank";
   document.body.style.overflow = "";
 }
 
