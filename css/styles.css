@@ -22,7 +22,7 @@ body {
 }
 
 .page {
-  max-width: 1280px;
+  width: min(100%, 1280px);
   margin: 0 auto;
   padding: 32px 20px 48px;
 }
@@ -295,7 +295,7 @@ body {
   word-break: break-word;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .modal-content {
     width: min(95vw, 1100px);
     margin: 2vh auto;
@@ -313,7 +313,7 @@ body {
   }
 
   .video-frame-wrapper.portrait {
-    max-width: 740px;
+    width: min(100%, 740px);
     max-height: 100%;
     margin: 0 auto;
   }
@@ -331,13 +331,13 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .climb-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   .climb-grid {
     grid-template-columns: 1fr;
   }
